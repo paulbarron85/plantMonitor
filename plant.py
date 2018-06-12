@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 print "Hello World!"
-
+print ("Press CTRL+C to exit")
 # Pin Definitions:
 pumpPin = 23 # Broadcom pin 23 (P1 pin 16)
 
@@ -17,5 +17,5 @@ try:
         GPIO.output(pumpPin, GPIO.LOW)
         time.sleep(1)
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
-    print "Goodbye World!"
+    print "\nGoodbye World!"
     GPIO.cleanup()
