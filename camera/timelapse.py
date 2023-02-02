@@ -1,3 +1,4 @@
+import sys
 import os
 import datetime
 import time
@@ -24,7 +25,7 @@ print('Final film FPS_OUT {} (hardcoded)'.format(FPS_OUT))
 print('Final film length {} seconds (calculated)'.format(filmLength))
 
 try:
-    start = datetime.datetime.strptime(args.startTime,("%y%m%d.%H%M"))
+    start = datetime.datetime.strptime(args.startTime,("%y%m%d%H%M"))
     print(start)
 except:
     print("Time not in YYMMDDHHMM format")
